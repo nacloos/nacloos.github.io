@@ -12,8 +12,8 @@ theme_settings:
   description: "A website with blog posts and pages" # used by search engines
 
   # Header and footer text
-  header_text: >
-     <p>Welcome to my blog !</p>
+  header_text:
+     # <p>Welcome to my blog !</p>
   header_text_feature_image:
   footer_text:
 
