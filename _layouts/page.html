@@ -1,6 +1,16 @@
 ---
 layout: default
 ---
+
+<!-- <div class="call-out" style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+	<h2 class="title">{{ page.feature-title | default: page.title }}</h2>
+	{% if page.subtitle %}<h3 class="subtitle">{{ page.subtitle }}</h3>{% endif %}
+</div>
+<article>
+  <section class="post-content">{{ content }}</section>
+</article>
+
+ -->
 <article {% if page.feature-img %}class="feature-image"{% endif %}>
   <header style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
     <h1 class="title">{{ page.feature-title | default: page.title }}</h1>
