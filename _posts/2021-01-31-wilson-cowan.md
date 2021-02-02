@@ -1,65 +1,79 @@
 ---
 layout: post
 title: The Wilson-Cowan model
+subtitle: A dynamical model for the mean activity of populations of neurons
 tags: [neuronal dynamics]
 ---
 
 
-The brain is a complex system, and as all complex systems, its dynamics is highly nonlinear with complexity at many different scales. Large scale properties emerge from interactions at smaller scales but cannot be understood from the mechanisms of the smaller scales only. For example, at the molecular level one can study the mechanisms that generate action potentials in neurons. But a perfect understanding of the molecular mechanisms is not enough to understand how the brain is able to perform complex cognitive abilities such as memory, reasoning, spatial navigation, language, etc. Instead, the large scale of brain networks is more appropriate to gain insights on how the brain achieves such remarkable abilities. This is why it is important to model the dynamics of large networks of neurons.
+The brain is a complex system, and as all complex systems, its dynamics is highly nonlinear with complexity at many different scales. Large scale properties emerge from interactions at smaller scales but cannot be understood from the mechanisms of the smaller scales only. For example, at the molecular level one can study the mechanisms that generate action potentials in neurons but a perfect understanding of these mechanisms is not enough to understand how the brain is able to perform complex cognitive abilities such as memory, reasoning, spatial navigation, language, etc. Instead, the large scale of brain networks is more appropriate to gain insights on how the brain achieves such remarkable abilities. This is why it is important to model the dynamics of large networks of neurons.
 
-The problem is that the brain contains millions of neurons and that it is impossible to simulate the dynamics of individual neurons when considering such a large number of them. Physics faced the same problem where it is impossible to solve the equations of motion for each of the $$10^{27}$$ atoms of a gas. Statistical physics provides a procedure to go from a theory of the constituents at the microscale, to a macroscale description of the system. The main idea is to define macroscopic observables as statistical properties of the microstates of the system. For example the internal energy of a gas is defined as the average of the energy over all the microstates, i.e. positions and momenta of each atoms, compatible with the macrostate, i.e. thermodynamic state, of the gas. A similar approach can be taken to study the dynamics of the brain at larger scales than individual neurons. Indeed, large populations of neurons with similar properties can be found in the cortex and in such populations, one can simulate the mean firing activity of the population of neurons instead of the activity of individual neurons, which greatly reduces the computational cost.
+The problem is that the brain contains millions of neurons and that it is impossible to simulate the dynamics at the level of single neuron when considering such a large number of them. Physics faced the same problem since it is impossible to solve the equations of motion for each of the $$10^{27}$$ atoms of a gas. Statistical physics provides a procedure to go from a theory of the constituents at the microscale, to a macroscale description of the system. The main idea is to define macroscopic observables as statistical properties of the microstates of the system. For example the internal energy of a gas is defined as an average of the energy over all the microstates. A similar approach can be taken to study the dynamics of the brain at large scales. Indeed, large populations of neurons with similar properties can be found in the cortex and in such populations, one can simulate the mean firing activity of the population of neurons instead of the activity of individual neurons, which greatly reduces the computational cost. 
+
+In this blog post, I will present two such models, the rate model and the Wilson-Cowan model, and with the tools of the theory of nonlinear dynamical systems, we will analyse the dynamics of these models. Notably, we will see that the dynamics of the Wilson-Cowan model can exhibit hysteresis, limit cycles, and even a homoclinic orbit. The code used to make all the figures is available [here](https://github.com/nacloos/Wilson-Cowan-model) and don't hesitate to [contact me](mailto:cloosnathan@gmail.com) by email if you have questions, remarks or if you want more details.
 
 
 ## The rate model
-The rate model describes the dynamics of the mean activity of a homogeneous population of neurons. The population activity, $$A(t)$$, can be seen as the proportion of active neurons at time $$t$$. If the neurons in the population are disconnected, the dynamics is the following
+The first model is a one-dimensional differential equation describing the dynamics of the mean activity of a population of neurons. This mean activity, also called firing rate or population activity, is denoted by $$A(t)$$. Assuming that the population receives an external input $$I$$ and that the neurons are not connected together, the rate model is the following
 
 $$
 \tau \dfrac{dA}{dt} = -A + F(I)
 $$
 
-where $$\tau$$ is a time constant, $$I$$ is the external input current, and $$F$$ is a nonlinear activation function relating the input of a neuron to its activity. The equilibrium is $$A^* = F(I)$$, and there is no bifurcation. Recurrent connections can be added within the population of neurons to get a more interesting behaviour. We assume that the population is fully-connected with the same weight $$w$$ for each connection. This assumption allows us to write the dynamics of the population activity as
+where $$\tau$$ is a time constant and $$F$$ is a nonlinear activation function relating the input of a neuron to its activity. The solution at equilibrium is defined by the equation $$\frac{dA}{dt}=0$$, which simply gives $$A = F(I)$$. Now, let's consider a fully-connected population of neurons, with the same weight $$w$$ for each connection. Then the rate model becomes
 
 $$
 \tau \dfrac{dA}{dt} = -A + F(wA + I)
 $$
 
-The additional term $$wA$$ inside $$F$$ accounts for the inputs that each neuron receives from all the others. 
-Now the equilibria are the solutions of the equation $$A = F(wA + I)$$, which depend on the external input $$I$$. To study the bifurcations of this dynamical system, it is needed to choose a particular form for the activation function $$F$$. A popular choice is the sigmoid activation function, which is given by
+The additional term $$wA$$ inside $$F$$ accounts for the inputs that each neuron receives from all the others. To found the equilibria, we can look at the solutions of the equation $$A = F(wA + I)$$ but we have to be careful because the number of solutions depend on the form of the activation function $$F$$ and on the external input $$I$$. Let's take a sigmoid activation function given by
 
 $$
 F(x) = \dfrac{1}{1+e^{-a(x-\theta)}} - \dfrac{1}{1+e^{a\theta}}
 $$
 
-where the parameter $$\theta$$ is the position of the inflection point of the sigmoid, and $$\frac{a}{4}$$ is the slope at $$\theta$$.
+where the parameter $$\theta$$ is the position of the inflection point of the sigmoid, and $$\frac{a}{4}$$ is the slope at $$\theta$$. You can see the shape of this function in red on the plots just below. We will now study the equilibrium solutions as a function of the external input $$I$$. 
 
-#### Saddle-node bifurcation
-The system undergoes two saddle-node bifurcations as the parameter $$I$$ varies. To see why, the figure below shows the graphs $$y=x$$ and $$y=F(wx+I)$$ for different values of the external input $$I$$. The parameters $$w$$, $$a$$, and $$\theta$$ are kept fixed. The equilibria are given by the intersections of these two graphs. Let's start with the leftmost plot, $$I$$ is below the first critical threshold and there is only one equilibrium. Increasing $$I$$ moves the graph of $$F$$ towards the left, and at some point its upper part intersects with the line $$y=x$$. There are now three equilibria. If $$I$$ keeps increases above the second critical threshold, the two lower equilibria disappear. The second figure gives another visualization of these saddle-node bifurcations, where the stability of the equilibria is also represented. We recognize a hysteresis phenomenon.
+#### Saddle-node bifurcations and hysteresis
+
+We can understand qualitatively how the solutions $$A = F(wA + I)$$ vary with $$I$$ by plotting the graphs $$y=x$$ and $$y=F(wx+I)$$ and looking at their intersections. The plots on the figure below show these graphs for different values of the external input $$I$$. Let's start with the leftmost plot, $$I$$ is below a first critical threshold and there is only one equilibrium. Increasing $$I$$ moves the graph of $$F$$ towards the left, and at some point its upper part intersects with the line $$y=x$$. There are now three equilibria. If $$I$$ keeps increasing above a second critical threshold, the two lower equilibria disappear. So the behaviour of the system, i.e. towards which equilibrium state it will converge, depends critically on the value of $$I$$. This abrupt change of behaviour when a parameter is changed is called a [bifurcation](https://en.wikipedia.org/wiki/Bifurcation_theory) of the system. For systems of dimensions less or equal to two, all the possible bifurcations can be classified. In this case, we have what is called two [saddle-node bifurcations](https://en.wikipedia.org/wiki/Saddle-node_bifurcation). We will encounter other types of bifurcations in the next section. 
 
 <img src="{{ site.baseurl }}/assets/img/wilson_cowan/rate_bif.png" class="center">
+
+The next figure gives another visualisation of these saddle-node bifurcations. the x-axis is the external input $$I$$ and the y-axis gives the equilibria of the system. We can see the two critical values of $$I$$ (dotted lines) for which there is an abrupt change of behaviour. The stability of the equilibria is also represented with two stable equilibria (solid lines) and one unstable (dashed lines).
+
 <img src="{{ site.baseurl }}/assets/img/wilson_cowan/rate_hysteresis.png" width="500" class="center">
+
+Even though this model is a crude approximation of the dynamics of real neurons in the brain, it can actually play the role of a short-term memory. To see this, let's consider that the neural activity is initially at rest, i.e. $$A$$ is small, and that the external input $$I$$ is situated between the two critical thresholds (dotted lines on the figure above). An external stimulation will increase the value of $$I$$ but the activity $$A$$ will remained attracted to the stable equilibrium of low activity, until $$I$$ crosses the second critical threshold. At this point the low activity equilibrium disappears and the state converges towards the only equilibrium remaining, which is an equilibrium of high neural activity. When the external stimulation ceases, $$I$$ comes back to its initial value but the neurons remain highly activity, playing the role of a memory of the stimulation. This phenomenon is also well-know in physics under the name of [hysteresis](https://en.wikipedia.org/wiki/Hysteresis).
+
+
 
 
 ## The Wilson-Cowan model
-The Wilson-Cowan model describes the dynamics of two populations of neurons, one is excitatory and the other is inhibitory. It is assumed that all the neurons within a population have identical characteristics, so that their dynamics can be described by the mean population activity. The population activity is denoted by $$E$$ for the excitatory neurons, and by $$I$$ for the inhibitory neurons. 
-The dynamics of each population is taken to be the dynamics of the rate model described in the previous section.
-In order to simplify the calculations, it is further assumed that the two populations have the same parameters, i.e. $$\tau$$, $$a$$, and $$\theta$$. If needed this assumption can be relaxed. The two populations have recurrent connections and are connected to each other, as shown on figure. They also receive their own external input current, $$E_{ext}$$ and $$I_{ext}$$ for the $$E$$ and $$I$$ population, respectively. We obtain the following coupled dynamical equations
+The second model that we will analyse is called the Wilson-Cowan model ([original paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1484078/pdf/biophysj00727-0011.pdf)). This model also describes the dynamics of the mean activity but of two separate populations of neurons, one is excitatory and the other is inhibitory. The mean activity is denoted by $$E$$ for the excitatory neurons, by $$I$$ for the inhibitory neurons, and the dynamics for each population is taken to be the dynamics of the rate model described in the previous section. The two populations have recurrent connections and are connected to each other, as shown on the figure below. They also receive their own external input current, $$E_{ext}$$ and $$I_{ext}$$ for the $$E$$ and $$I$$ population, respectively.
+
+<img src="{{ site.baseurl }}/assets/img/wilson_cowan/weights.png" width="400" class="center">
+
+We obtain the following coupled dynamical equations
 
 $$
- \begin{aligned}
+\begin{aligned}
 \tau \dfrac{dE}{dt} &= -E + F(w_{EE}E - w_{EI}I + E_{ext})\\
 \tau \dfrac{dI}{dt} &= -I + F(w_{IE}E - w_{II}I + I_{ext})
 \end{aligned}
 $$
 
-where all the weights $$w_{EE}$$, $$w_{EI}$$, $$w_{IE}$$, $$w_{II}$$ are positive constants, and the inhibitory connections contribute negatively when summing the inputs of a population. This dynamical system is called the Wilson-Cowan model \cite{wilson_cowan_1972}. Its state space is two-dimensional, which allows for richer dynamics than the one-dimensional rate model as we will see in the subsequent sections. 
+where all the weights $$w_{EE}$$, $$w_{EI}$$, $$w_{IE}$$, $$w_{II}$$ are positive constants, and the inhibitory connections contribute negatively when summing the inputs of a population. The activation function $$F$$ is the sigmoid function used in the previous section. The state space is two-dimensional, which allows for richer dynamics than the one-dimensional rate model as we will see in the subsequent sections. 
 
-#### Analysis of the equilibria
-In this section I compute analytically the equation of the curve of equilibria where the trace, and then the determinant, of the Jacobian vanishes. These results will be useful in the next section, where we will analyse the bifurcations of the Wilson-Cowan model occurring when varying the external inputs $$E_{ext}$$ and $$I_{ext}$$. The approach taken to compute the bifurcation curves is similar to the one described in the book \emph{Weakly connected neural networks} \cite{hoppensteadt_izhikevich_1997}, p.45. However I provide more detailed calculations here, and I use a more general form for the sigmoid activation function.
+#### Nullclines
+The equilibria of the system can be found by solving the equations $$\frac{dE}{dt}=0$$ and $$\frac{dI}{dt}=0$$, but these equations are often difficult to solve analytically for nonlinear dynamical systems. As in the previous section we can use a graphical method to understand qualitatively the solutions, and use numerical methods to obtain quantitative results. The equation $$\frac{dE}{dt}=0$$  defines a curve in the $$(E,I)$$ plane which is called the *E-nullcline*, it is shown in solid line on the figure below. Similarly, $$\frac{dI}{dt}=0$$ defines a curve called the *I-nullcline* and it is in dashed line on the figure. An equilibrium satisfies both of these equations and so it is an intersection of the E-nullcline and the I-nullcline. Note that while their intersections cannot be calculated directly, the equations of these nullclines can be obtained analytically and used to plot them. For the example of the figure below where the external inputs $$E_{ext}$$ and $$I_{ext}$$ are null, there is only one equilibrium corresponding to a state of low neural activity. We will use this graphical method again later on.
+<img src="{{ site.baseurl }}/assets/img/wilson_cowan/nullclines.png" width="500" class="center">
 
-<img src="{{ site.baseurl }}/assets/img/wilson_cowan/weights.png" width="400" class="center">
-<img src="{{ site.baseurl }}/assets/img/wilson_cowan/nullclines_annotated.png" width="500" class="center">
+<!--In this section I compute analytically the equation of the curve of equilibria where the trace, and then the determinant, of the Jacobian vanishes. These results will be useful in the next section, where we will analyse the bifurcations of the Wilson-Cowan model occurring when varying the external inputs $$E_{ext}$$ and $$I_{ext}$$. The approach taken to compute the bifurcation curves is similar to the one described in the book \emph{Weakly connected neural networks} \cite{hoppensteadt_izhikevich_1997}, p.45. However I provide more detailed calculations here, and I use a more general form for the sigmoid activation function.-->
+
+
 #### Stability & bifurcation diagram
-In this section we will try to understand the dynamical repertoire of the Wilson-Cowan model, and, in particular, how the dynamics depends on the external inputs $$E_{ext}$$ and $$I_{ext}$$. To this end, we will analyse the bifurcations occurring in the 2-dimensional parameter space $$(E_{ext}, I_{ext})$$. Without losing interesting behaviours, the external inputs can be restricted to positive values.
+Let's try to understand the dynamical repertoire of the Wilson-Cowan model and in particular, what kind of dynamics can be found when varying the external inputs $$E_{ext}$$ and $$I_{ext}$$. To this end, we will analyse the bifurcations occurring in the 2-dimensional parameter space $$(E_{ext}, I_{ext})$$. Without losing interesting behaviours, the external inputs can be restricted to positive values.
 
 In the previous section, we computed analytically bifurcation curves. The Hopf bifurcation curve is given by the equilibria where the trace of the Jacobian vanishes, and where its determinant is positive. This curve in the $$(E_{ext}, I_{ext})$$ plane is shown on figure below, in solid line. The saddle-node bifurcation curve is given by the equilibria where the determinant of the Jacobian vanishes, which is depicted by the dotted line. To better visualize the behaviour of the system in the diagram of the figure, I added information about the equilibria for a regular grid of points in the $$(E_{ext}, I_{ext})$$ plane. For a particular point on this grid, the number of dots gives the number of equilibria, their shape represents their stability, and their color indicates whether their eigenvalues are real or complex conjugate. These results were obtained by computing numerically the intersections of the two nullclines, and by looking at the eigenvalues of the Jacobian evaluated at these intersections.
 
@@ -104,12 +118,24 @@ As the saddle-node bifurcation is crossed, the focus and the saddle-point collid
 ## Conclusion
 We have seen that the Wilson-Cowan model exhibits a rich dynamical repertoire, and that we can move from a dynamical regime to another with two control parameters, for example the external input of the excitatory neurons and the one of the inhibitory neurons. We found hysteresis and limit cycles, which are thought to have significant functions in the brain. For example the hysteresis is a mechanism of short-term memory that might be used in the brain. It is also known that oscillatory patterns play an important role in the hippocampus for abilities such as spatial navigation. 
 
-
 With the two models presented here, the dynamics at the scale of neuronal populations is obtained by averaging the fast dynamics of individual neurons, and by considering as constant the slow dynamics of synaptic weights. But they are better ways to take into account the dynamics at other scales. For example higher order statistics of the neural activity can be considered with an explicit modelisation of the noise using stochastic dynamics. They are also adaptive models of neurons that take into account the slow dynamics of ion channels.
 The analysis of such models is more challenging and requires other tools than those used here. It would also be interesting to directly compare the activity of a simulated network of neurons, with the activity predicted by a population model such as the Wilson-Cowan model. For example, one could ask which bifurcations can still be observed in the simulated network.
 
-There is still a long way to go to understand the emergence of cognitive abilities from the dynamics of neurons, but this is a road that I find fascinating to pursue.
+
+
+Describe the mean activity and don't model the fluctuations. Ok if the the number of neurons is very large, the fluctuations become negligeable (law of large number). Stochastic Wilson-Cowan, requires tools from physics such as path integrals and Feymann diagrams. This will be for another post.
 
 
 
-### Details of the calculations (optional)
+
+
+There is still a long way to go to understand the emergence of cognitive abilities from the dynamics of neurons, but this is a fascinating road to pursue.
+
+
+
+## Materials
+
+* An introductory book on the theory of nonlinear dynamical systems
+* The original paper of the Wilson-Cowan model
+* A book an neuronal dynamics for more advanced models of neurons and populations of neurons
+* A notebook with exercices in python on network dynamics provided by Neuromatch Academy

@@ -3,12 +3,23 @@ layout: default
 ---
 
 <div class="home">
-  {% if site.theme_settings.header_text %}
   <div class="call-out"
   style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
-    {{ site.theme_settings.header_text }}
+    <p>In this blog I write about my personal or school projects that I find interesting to share.</p>
+    <p>The topics currently include:</p>
+
+    <!-- List all the tags -->
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% assign tag_words = site_tags | split:',' | sort %}
+    <div class="tags">
+    {% for item in (0..site.tags.size) %}
+      {% unless forloop.last %}
+        {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+        <a class="tag" href="{{site.baseurl}}/tags#{{ this_word | cgi_escape }}">#{{ this_word }}</a>
+      {% endunless %}
+    {% endfor %}
+    </div>
   </div>
-  {% endif %}
 
   <div class="posts">
     {% for post in paginator.posts %}
