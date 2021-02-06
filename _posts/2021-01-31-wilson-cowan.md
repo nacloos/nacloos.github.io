@@ -10,9 +10,7 @@ The brain is a complex system, and as all complex systems, its dynamics is highl
 
 The problem is that the brain contains millions of neurons and that it is impossible to simulate the dynamics at the level of single neuron when considering such a large number of them. Physics faced the same problem since it is impossible to solve the equations of motion for each of the $$10^{27}$$ atoms of a gas. Statistical physics provides a procedure to go from a theory of the constituents at the microscale, to a macroscale description of the system. The main idea is to define macroscopic observables as statistical properties of the microstates of the system. For example the internal energy of a gas is defined as an average of the energy over all the microstates. A similar approach can be taken to study the dynamics of the brain at large scales. Indeed, large populations of neurons with similar properties can be found in the cortex and in such populations, one can simulate the mean firing activity of the population of neurons instead of the activity of individual neurons, which greatly reduces the computational cost. 
 
-In this blog post, I will present two such models, the rate model and the Wilson-Cowan model, and with the tools of the theory of nonlinear dynamical systems, we will analyse the dynamics of these models. Notably, we will see that the dynamics of the Wilson-Cowan model can exhibit hysteresis, limit cycles, and even a homoclinic orbit. The code used to make all the figures is available [here](https://github.com/nacloos/Wilson-Cowan-model) and don't hesitate to [contact me](mailto:cloosnathan@gmail.com) by email if you have questions, remarks or if you want more details. 
-
-I provide a list of resources at the end if you want to learn more.
+In this blog post, I will present two such models, the rate model and the Wilson-Cowan model, and with the tools of the theory of nonlinear dynamical systems, we will analyse the dynamics of these models. Notably, we will see that the dynamics of the Wilson-Cowan model can exhibit hysteresis, limit cycles, and even a homoclinic orbit. At the end of this post, I provide a short list with some material on the subjects that I will talk about. The code used to make all the figures is available [here](https://github.com/nacloos/Wilson-Cowan-model) and don't hesitate to [contact me](mailto:cloosnathan@gmail.com) by email if you have questions, remarks or if you want more details. 
 
 
 ## The rate model
@@ -125,30 +123,25 @@ As the saddle-node bifurcation is crossed, the focus and the saddle-point collid
 
 
 ## Conclusion
-We have seen that the Wilson-Cowan model exhibits a rich dynamical repertoire, and that we can move from a dynamical regime to another with two control parameters, for example the external input of the excitatory neurons and the one of the inhibitory neurons. We found hysteresis and limit cycles, which are thought to have significant functions in the brain. For example the hysteresis is a mechanism of short-term memory that might be used in the brain. It is also known that oscillatory patterns play an important role in the hippocampus for abilities such as spatial navigation. 
+We have seen that the Wilson-Cowan model has a rich dynamical repertoire. The system composed of a population of excitatory neurons and a population of inhibitory neurons can have quite different behaviour depending on the external inputs the populations receive. As in the case of the rate model, the neuronal activity can exhibit a hysteresis revealing a mechanism for short-term memory. The Wilson-Cowan model also explains how oscillations can be produced from excitation and inhibition, and it is kown that oscillations are omnipresent in the brain, often under the name of brain rythms. However their function is still not well understood. For example, they could organize the communication in the brain as the neuroscientist György Buzsáki wrote in his book The Brain from Inside Out (2019):
 
-How a population of excitatory neurons coupled with a population of inhibitory neurons can produce oscillations.
+> "the hierarchy of brain oscillations may parse and group neuronal activity to decompose and package neuronal information in communication between brain areas"  (p.162)
 
-
-
-With the two models presented here, the dynamics at the scale of neuronal populations is obtained by averaging the fast dynamics of individual neurons, and by considering as constant the slow dynamics of synaptic weights. But they are better ways to take into account the dynamics at other scales. For example higher order statistics of the neural activity can be considered with an explicit modelisation of the noise using stochastic dynamics. They are also adaptive models of neurons that take into account the slow dynamics of ion channels.
-The analysis of such models is more challenging and requires other tools than those used here. It would also be interesting to directly compare the activity of a simulated network of neurons, with the activity predicted by a population model such as the Wilson-Cowan model. For example, one could ask which bifurcations can still be observed in the simulated network.
+Thus, this kind of model is a small step towards the understanding of the emergence of complex cognitive abilities from the dynamics of neurons.
 
 
 
-Describe the mean activity and don't model the fluctuations. Ok if the the number of neurons is very large, the fluctuations become negligeable (law of large number). Stochastic Wilson-Cowan, requires tools from physics such as path integrals and Feymann diagrams. This will be for another blog post.
+<!--With the two models presented here, the dynamics at the scale of neuronal populations is obtained by averaging the fast dynamics of individual neurons, and by considering as constant the slow dynamics of synaptic weights. But they are better ways to take into account the dynamics at other scales. For example higher order statistics of the neural activity can be considered with an explicit modelisation of the noise using stochastic dynamics. They are also adaptive models of neurons that take into account the slow dynamics of ion channels.-->
+<!--The analysis of such models is more challenging and requires other tools than those used here.-->
 
-
-
-
-
-There is still a long way to go to understand the emergence of cognitive abilities from the dynamics of neurons, but this is a fascinating road to pursue.
+<!--Describe the mean activity and don't model the fluctuations. Ok if the the number of neurons is very large, the fluctuations become negligeable (law of large number). Stochastic Wilson-Cowan, requires tools from physics such as path integrals and Feymann diagrams. This will be for another blog post.-->
 
 
 
 ## Material
 
-* An introductory book on the theory of nonlinear dynamical systems
-* The original paper of the Wilson-Cowan model
-* A book an neuronal dynamics for more advanced models of neurons and populations of neurons
-* A notebook with exercices in python on network dynamics provided by Neuromatch Academy
+*  [Nonlinear Dynamics and Chaos (Strogatz, 2014)](http://www.stevenstrogatz.com/books/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering) - an introductory book on the theory of nonlinear dynamical systems
+* [Excitatory and Inhibitory Interactions in Localized Populations of
+  Model Neurons (Cowan, 1972)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1484078/pdf/biophysj00727-0011.pdf) - the original paper of the Wilson-Cowan model
+* [Neuromatch Academy: Dynamic Networks](https://github.com/NeuromatchAcademy/course-content/tree/master/tutorials/W3D2_DynamicNetworks) - notebooks with exercices in python on the rate model and the Wilson-Cowan model
+* [Neuronal Dynamics (Gerstner, 2014)](https://neuronaldynamics.epfl.ch/index.html) - a book with more advanced models of neurons and populations of neurons
