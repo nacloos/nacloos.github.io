@@ -1,0 +1,45 @@
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Circle [id:dp1438464863503881] 
+\draw   (0.3,93.06) .. controls (0.3,85.4) and (6.51,79.18) .. (14.18,79.18) .. controls (21.84,79.18) and (28.05,85.4) .. (28.05,93.06) .. controls (28.05,100.72) and (21.84,106.93) .. (14.18,106.93) .. controls (6.51,106.93) and (0.3,100.72) .. (0.3,93.06) -- cycle ;
+%Shape: Circle [id:dp6458296272713993] 
+\draw   (74.3,93.76) .. controls (74.3,86.1) and (80.51,79.88) .. (88.18,79.88) .. controls (95.84,79.88) and (102.05,86.1) .. (102.05,93.76) .. controls (102.05,101.42) and (95.84,107.63) .. (88.18,107.63) .. controls (80.51,107.63) and (74.3,101.42) .. (74.3,93.76) -- cycle ;
+%Shape: Circle [id:dp20830855882670896] 
+\draw   (74.5,14.76) .. controls (74.5,7.1) and (80.71,0.88) .. (88.38,0.88) .. controls (96.04,0.88) and (102.25,7.1) .. (102.25,14.76) .. controls (102.25,22.42) and (96.04,28.63) .. (88.38,28.63) .. controls (80.71,28.63) and (74.5,22.42) .. (74.5,14.76) -- cycle ;
+%Straight Lines [id:da46577531063054445] 
+\draw    (88.38,28.63) -- (88.19,76.88) ;
+\draw [shift={(88.18,79.88)}, rotate = 270.22] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.14,-3.43) -- (0,0) -- (7.14,3.43) -- (4.74,0) -- cycle    ;
+%Straight Lines [id:da8038321372144615] 
+\draw    (23.52,82.69) -- (39.8,66.41) ;
+\draw [shift={(41.92,64.29)}, rotate = 495] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.14,-3.43) -- (0,0) -- (7.14,3.43) -- (4.74,0) -- cycle    ;
+%Straight Lines [id:da6354166587034297] 
+\draw    (79.92,82.69) -- (65.54,66.91) ;
+\draw [shift={(63.52,64.69)}, rotate = 407.65999999999997] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.14,-3.43) -- (0,0) -- (7.14,3.43) -- (4.74,0) -- cycle    ;
+%Straight Lines [id:da5434430211982987] 
+\draw    (59.12,47.09) -- (76.63,27.64) ;
+\draw [shift={(78.64,25.41)}, rotate = 492] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (7.14,-3.43) -- (0,0) -- (7.14,3.43) -- (4.74,0) -- cycle    ;
+
+% Text Node
+\draw (8.8,81.93) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \mathbf{x}$};
+% Text Node
+\draw (82.8,82.63) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \mathbf{\hat{x}}$};
+% Text Node
+\draw (83,3.63) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle \mathbf{z}$};
+% Text Node
+\draw (96.96,42.13) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle W$};
+% Text Node
+\draw (37.36,20.93) node [anchor=north west][inner sep=0.75pt]   [align=left] {$\displaystyle W^{T}$};
+% Text Node
+\draw (46.48,48.73) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {${\textstyle \sum }$};
+% Text Node
+\draw (33.28,74.13) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$+$};
+% Text Node
+\draw (60.48,73.93) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$-$};
+
+
+\end{tikzpicture}
