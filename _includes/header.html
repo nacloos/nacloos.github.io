@@ -15,6 +15,11 @@
 	</div>
 	<nav class="site-nav">
 		<ul>
+			<!-- Home page button -->
+			<li>
+				<a class="page-link" href="{{ site.baseurl }}/">Home</a>
+			</li>
+			<!-- Other pages -->
 			{% if site.theme_settings.site_navigation_sort %}
 				{% assign site_pages = site.pages | sort: site.theme_settings.site_navigation_sort %}
 			{% else %}
