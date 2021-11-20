@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-My name is Nathan Cloos and I am a first-year master's student in Mathematical Engineering at Université Catholique de Louvain. I am very interested in computational neuroscience and in how tools from physics or applied mathematics can help us to understand the brain.
+My name is Nathan Cloos and I am a master's student in Mathematical Engineering at the Université Catholique de Louvain. I am currently doing an internship in the lab of Robert Yang at MIT, where I am working on a research project in computational neuroscience.
 
