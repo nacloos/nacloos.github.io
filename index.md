@@ -6,8 +6,6 @@ layout: page
 
 Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm generally interested in rapid learning and systematic generalization in brains and machines. I completed my master's in Applied Mathematics and Physics at UCLouvain in Belgium. I worked as a research assistant in the lab of Robert Yang at MIT, where I developed a pipeline to scale up the evaluation of Recurrent Neural Network models using quantitative similarity measures. I also had the chance to work in the lab of Omri Barak at the Technion. Besides my scientific work, I like building software to try to make scientific modelling more scalable and accessible.
 
-
-
 <br>
 <br>
 
@@ -19,7 +17,7 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
   <li>
     <strong>Automating and Validating Agent and Environment Code Generation with Large Language Models.</strong>
     <br>
-    <u>Nathan Cloos</u>, M Ganesh Kumar, Adam Manoogian, Christopher J Cueva, Shawn A. Rhoads. 
+    <u>Nathan Cloos</u>, M Ganesh Kumar, Adam Manoogian, Christopher J. Cueva<sup>†</sup>, Shawn A. Rhoads<sup>†</sup>. 
     <br><span class="presentation">NeurIPS 2024 Workshop on Behavioral ML. [<a href="https://openreview.net/pdf?id=p3T9CtEu1S">pdf</a>]</span>
   </li>
 
@@ -33,7 +31,7 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
   <li>
     <strong>Baba Is AI: Break the Rules to Beat the Benchmark.</strong>
     <br>
-    <u>Nathan Cloos</u>, Meagan Jens, Michelangelo Naim, Yen‑Ling Kuo, Ignacio Cases, Andrei Barbu, Christopher J Cueva. 
+    <u>Nathan Cloos</u>, Meagan Jens, Michelangelo Naim, Yen‑Ling Kuo, Ignacio Cases, Andrei Barbu<sup>†</sup>, Christopher J. Cueva<sup>†</sup>. 
     <br><span class="presentation">ICML 2024 Workshop on LLMs and Cognition. [<a href="https://arxiv.org/pdf/2407.13729">pdf</a>] [<a href="https://github.com/nacloos/baba-is-ai">code</a>]</span>
   </li>
 
@@ -52,7 +50,7 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
   </li>
 </ul>
 
-
+<p class="legend"><sup>†</sup> Equal senior authors</p>
 
 <style>
   ul.publication-list {
@@ -72,13 +70,15 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
     color: #2980b9;  /* Sets color for publication titles */
   }
 
-  ul.publication-list li br {
-    margin-top: 0.1em;  /* Adds a bit of space between the title and the presentation details */
-  }
 
   ul.publication-list li span.presentation {
     display: block;
     color: #7f8c8d;  /* Sets color for presentation details */
-    margin-top: 0.1em;
+  }
+
+  .legend {
+    font-size: 0.9em;
+    color: #7f8c8d;
+    margin-top: 1em;
   }
 </style>
