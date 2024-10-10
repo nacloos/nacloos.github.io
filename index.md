@@ -67,11 +67,6 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
     padding-left: 1.5em;
   }
 
-  ul.publication-list li strong {
-    font-weight: bold;
-    color: #2c3e50;  /* Sets color for author names */
-  }
-
   ul.publication-list li em {
     font-style: italic;
     color: #2980b9;  /* Sets color for publication titles */
