@@ -4,7 +4,11 @@ layout: page
 
 <img src="/assets/img/photo1.jpg" alt="photo" style="width: 15em; float: left; margin-left: 3em; margin-right: 3em; margin-bottom: 3em;" />
 
-Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm generally interested in rapid learning and systematic generalization in brains and machines. I completed my master's in Applied Mathematics and Physics at UCLouvain in Belgium. I worked as a research assistant in the lab of Robert Yang at MIT, where I developed a pipeline to scale up the evaluation of Recurrent Neural Network models using quantitative similarity measures. I also had the chance to work in the lab of Omri Barak at the Technion. Besides my scientific work, I like building software to try to make scientific modelling more scalable and accessible.
+Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences, where I study rapid learning and systematic generalization in brains and machines. 
+
+Before starting my PhD, I completed a master's in Applied Mathematics and Physics at UCLouvain in Belgium. I worked as a research assistant in Robert Yang's lab at MIT, developing scalable methods to evaluate Recurrent Neural Network models. I also had the opportunity to work in Omri Barak's lab at the Technion, studying generalization in computational models of neural dynamics.
+
+Recently, I've been exploring how Large Language Models (LLMs) can be used for writing scientific code. I'm particularly excited about their potential to transform computational modeling, making it significantly more efficient for scientists to explore the space of possible models.
 
 <br>
 <br>
@@ -15,7 +19,7 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
 
 <ul class="publication-list">
   <li>
-    <strong>Automating and Validating Agent and Environment Code Generation with Large Language Models.</strong>
+    <strong>Generating and Validating Agent and Environment Code for Simulating Realistic Personality Profiles with Large Language Models.</strong>
     <br>
     <u>Nathan Cloos</u>, M Ganesh Kumar, Adam Manoogian, Christopher J. Cueva<sup>†</sup>, Shawn A. Rhoads<sup>†</sup>. 
     <br><span class="presentation">NeurIPS 2024 Workshop on Behavioral ML. [<a href="https://openreview.net/pdf?id=p3T9CtEu1S">pdf</a>]</span>
@@ -39,7 +43,7 @@ Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences. I'm g
     <strong>Differentiable optimization of similarity scores between models and brains.</strong>
     <br>
     <u>Nathan Cloos</u>, Moufan Li, Markus Siegel, Scott L. Brincat, Earl K. Miller, Guangyu Robert Yang, Christopher J. Cueva. 
-    <br><span class="presentation">ICLR 2024 Workshop on Representational Alignment. [<a href="https://arxiv.org/pdf/2407.07059">pdf</a>] [<a href="https://github.com/nacloos/diffscore">code</a>]</span>
+    <br><span class="presentation">ICLR 2024 Workshop on Representational Alignment. [<a href="https://arxiv.org/pdf/2407.07059">pdf</a>] [<a href="https://github.com/nacloos/diffscore">code</a>] [<a href="https://nacloos.github.io/diffscore-site/">website</a>]</span>
   </li>
 
   <li>
