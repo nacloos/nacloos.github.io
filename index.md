@@ -4,12 +4,9 @@ layout: page
 
 <img src="/assets/img/photo1.jpg" alt="photo" style="width: 15em; float: left; margin-left: 3em; margin-right: 3em; margin-bottom: 3em;" />
 
-Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences, where I study rapid learning and systematic generalization in brains and machines. 
+Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences, working in computational neuroscience and AI.
 
-Before starting my PhD, I completed a master's in Applied Mathematics and Physics at UCLouvain in Belgium. I worked as a research assistant in Robert Yang's lab at MIT, developing scalable methods to evaluate Recurrent Neural Network models. I also had the opportunity to work in Omri Barak's lab at the Technion, studying generalization in computational models of neural dynamics.
-
-Recently, I've been exploring how Large Language Models (LLMs) can be used for writing scientific code. I'm particularly excited about their potential to transform computational modeling, making it significantly more efficient for scientists to explore the space of possible models.
-
+Before starting my PhD, I completed a master's in Mathematical Engineering and Physics at UCLouvain in Belgium. I worked as a research assistant in Robert Yang's lab at MIT, developing scalable methods to evaluate Recurrent Neural Network models. I also had the opportunity to work in Omri Barak's lab at the Technion, studying generalization in computational models of neural dynamics.
 <br>
 <br>
 
