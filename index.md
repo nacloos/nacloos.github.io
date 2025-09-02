@@ -16,6 +16,14 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
 
 <ul class="publication-list">
   <li>
+    <strong>Differentiable optimization of similarity scores between models and brains.</strong>
+    <br>
+    <u>Nathan Cloos</u>, Moufan Li, Markus Siegel, Scott L. Brincat, Earl K. Miller, Guangyu Robert Yang, Christopher J. Cueva. 
+    <br><span class="presentation">ICLR 2025 [<a href="https://openreview.net/pdf?id=vWRwdmA3wU">pdf</a>] [<a href="https://github.com/nacloos/diffscore">code</a>] [<a href="https://nacloos.github.io/diffscore-site/">website</a>]</span>
+  </li>
+
+  
+  <li>
     <strong>Generating and Validating Agent and Environment Code for Simulating Realistic Personality Profiles with Large Language Models.</strong>
     <br>
     <u>Nathan Cloos</u>, M Ganesh Kumar, Adam Manoogian, Christopher J. Cueva<sup>†</sup>, Shawn A. Rhoads<sup>†</sup>. 
@@ -34,13 +42,6 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
     <br>
     <u>Nathan Cloos</u>, Meagan Jens, Michelangelo Naim, Yen‑Ling Kuo, Ignacio Cases, Andrei Barbu<sup>†</sup>, Christopher J. Cueva<sup>†</sup>. 
     <br><span class="presentation">ICML 2024 Workshop on LLMs and Cognition. [<a href="https://arxiv.org/pdf/2407.13729">pdf</a>] [<a href="https://github.com/nacloos/baba-is-ai">code</a>]</span>
-  </li>
-
-  <li>
-    <strong>Differentiable optimization of similarity scores between models and brains.</strong>
-    <br>
-    <u>Nathan Cloos</u>, Moufan Li, Markus Siegel, Scott L. Brincat, Earl K. Miller, Guangyu Robert Yang, Christopher J. Cueva. 
-    <br><span class="presentation">ICLR 2024 Workshop on Representational Alignment. [<a href="https://arxiv.org/pdf/2407.07059">pdf</a>] [<a href="https://github.com/nacloos/diffscore">code</a>] [<a href="https://nacloos.github.io/diffscore-site/">website</a>]</span>
   </li>
 
   <li>
