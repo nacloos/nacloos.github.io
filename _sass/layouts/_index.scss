@@ -18,7 +18,14 @@
 // Post listing
 .posts {
   .post-teaser {
-    @extend %padding-regular;
+    // Use tighter vertical spacing for blog list items.
+    padding: $padding-x-small $padding-large;
+    @media (max-width: 1000px) {
+      padding: $padding-x-small $padding-large / 1.6;
+    }
+    @media (max-width: 576px) {
+      padding: $padding-x-small;
+    }
     width: 100%;
     margin-bottom: 0;
     display: inline-block;

@@ -16,7 +16,7 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
 
 <ul class="publication-list">
   <li>
-    <strong>Differentiable optimization of similarity scores between models and brains.</strong>
+    <strong>Differentiable Optimization of Similarity Scores Between Models and Brains.</strong>
     <br>
     <u>Nathan Cloos</u>, Moufan Li, Markus Siegel, Scott L. Brincat, Earl K. Miller, Guangyu Robert Yang, Christopher J. Cueva. 
     <br><span class="presentation">ICLR 2025 [<a href="https://openreview.net/pdf?id=vWRwdmA3wU">pdf</a>] [<a href="https://github.com/nacloos/diffscore">code</a>] [<a href="https://nacloos.github.io/diffscore-site/">website</a>]</span>
