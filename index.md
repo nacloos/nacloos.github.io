@@ -12,6 +12,19 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
 
 <div style="clear: both;"></div>
 
+<h3>Hackathons</h3>
+
+<ul class="publication-list">
+  <li>
+    Built <a href="https://twitter.com/xai/status/1997875229511782692"><strong>Grok Play</strong></a> in 24 hours and won 1st place at <strong>xAI hackathon</strong> (+500 participants).
+  </li>
+</ul>
+
+<div style="display: flex; justify-content: center;">
+  <blockquote class="twitter-tweet" data-conversation="none" data-width="350"><p lang="en" dir="ltr">Grok Play: Enjoy and create multiplayer games where your Grok Owl can climb the leaderboard by playing against you, your friends, your friends&#39; Owls, and itself.<a href="https://twitter.com/nacloos?ref_src=twsrc%5Etfw">@nacloos</a> <a href="https://twitter.com/961014dltkdg?ref_src=twsrc%5Etfw">@961014dltkdg</a> <a href="https://t.co/iZAJYOaF2z">pic.twitter.com/iZAJYOaF2z</a></p>&mdash; xAI (@xai) <a href="https://twitter.com/xai/status/1997875229511782692?ref_src=twsrc%5Etfw">December 8, 2025</a></blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
 <h3>Publications</h3>
 
 <ul class="publication-list">
@@ -20,6 +33,7 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
     <br>
     <u>Nathan Cloos</u>, Moufan Li, Markus Siegel, Scott L. Brincat, Earl K. Miller, Guangyu Robert Yang, Christopher J. Cueva. 
     <br><span class="presentation">ICLR 2025 [<a href="https://openreview.net/pdf?id=vWRwdmA3wU">pdf</a>] [<a href="https://github.com/nacloos/diffscore">code</a>] [<a href="https://nacloos.github.io/diffscore-site/">website</a>]</span>
+    <a style="display: inline-block; margin-top: 0.3em;" href="https://github.com/nacloos/diffscore"><img src="https://gh-card.dev/repos/nacloos/diffscore.svg" alt="diffscore" style="width: 410px;"></a>
   </li>
 
   
@@ -35,6 +49,7 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
     <br>
     <u>Nathan Cloos</u>, Guangyu Robert Yang, Christopher J. Cueva. 
     <br><span class="presentation">NeurIPS 2024 Workshop UniReps. [<a href="https://openreview.net/pdf?id=vyRAYoxUuA">pdf</a>] [<a href="https://github.com/nacloos/similarity-repository">code</a>]</span>
+    <a style="display: inline-block; margin-top: 0.3em;" href="https://github.com/nacloos/similarity-repository"><img src="https://gh-card.dev/repos/nacloos/similarity-repository.svg" alt="similarity-repository" style="width: 410px;"></a>
   </li>
 
   <li>
@@ -42,6 +57,7 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
     <br>
     <u>Nathan Cloos</u>, Meagan Jens, Michelangelo Naim, Yen‑Ling Kuo, Ignacio Cases, Andrei Barbu<sup>†</sup>, Christopher J. Cueva<sup>†</sup>. 
     <br><span class="presentation">ICML 2024 Workshop on LLMs and Cognition. [<a href="https://arxiv.org/pdf/2407.13729">pdf</a>] [<a href="https://github.com/nacloos/baba-is-ai">code</a>]</span>
+    <a style="display: inline-block; margin-top: 0.3em;" href="https://github.com/nacloos/baba-is-ai"><img src="https://gh-card.dev/repos/nacloos/baba-is-ai.svg" alt="baba-is-ai" style="width: 410px;"></a>
   </li>
 
   <li>
