@@ -16,6 +16,11 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
 
 <ul class="publication-list">
   <li>
+    <a href="https://github.com/nacloos/clawblox"><strong>Clawblox</strong></a> (MIT Hack-Nation). An open-source Roblox-like engine to easily create environments and games for embodied agents.
+    <br>
+    <a style="display: inline-block; margin-top: 0.3em;" href="https://github.com/nacloos/clawblox"><img src="https://gh-card.dev/repos/nacloos/clawblox.svg" alt="clawblox" style="width: 410px;"></a>
+  </li>
+  <li>
     Built <a href="https://twitter.com/xai/status/1997875229511782692"><strong>Grok Play</strong></a> in 24 hours and won 1st place at <strong>xAI hackathon</strong> (+500 participants).
   </li>
 </ul>
