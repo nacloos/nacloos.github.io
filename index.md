@@ -30,6 +30,12 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+<ul class="publication-list">
+  <li>
+    Hackathon finalist awarded trip to <strong>MIT AI Conference</strong> in Palo Alto. Building 1M dynamic social environments to improve LLMs' social reasoning, including theory of mind, negotiation and persuasion skills.
+  </li>
+</ul>
+
 <h3>Publications</h3>
 
 <ul class="publication-list">
