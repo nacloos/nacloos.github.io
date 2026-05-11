@@ -16,12 +16,18 @@ Before starting my PhD, I completed a master's in Mathematical Engineering and P
 
 <ul class="publication-list">
   <li>
-    <a href="https://github.com/nacloos/clawblox"><strong>Clawblox</strong></a> (MIT Hack-Nation). An open-source Roblox-like engine to easily create environments and games for embodied agents.
+    Won 1st place at <strong>MIT CSAIL Agentic AI Hackathon</strong> building <a href="https://github.com/nacloos/clawblox"><strong>Clawblox</strong></a>, awarded $5k.
     <br>
+    <!--
     <a style="display: inline-block; margin-top: 0.3em;" href="https://github.com/nacloos/clawblox"><img src="https://gh-card.dev/repos/nacloos/clawblox.svg" alt="clawblox" style="width: 410px;"></a>
+    <br>
+    -->
+    <div style="text-align: center;">
+      <img src="/assets/img/prize.jpg" alt="Nathan Cloos with MIT CSAIL Agentic AI Hackathon prize" style="width: 320px; max-width: 100%; margin-top: 0.5em;">
+    </div>
   </li>
   <li>
-    Built <a href="https://twitter.com/xai/status/1997875229511782692"><strong>Grok Play</strong></a> in 24 hours and won 1st place at <strong>xAI hackathon</strong> (+500 participants).
+    Built <a href="https://twitter.com/xai/status/1997875229511782692"><strong>Grok Play</strong></a> in 24 hours and won 1st place at the <strong>xAI hackathon</strong> (+500 participants).
   </li>
 </ul>
 
