@@ -2,15 +2,7 @@
 layout: page
 ---
 
-<img src="/assets/img/photo1.jpg" alt="photo" style="width: 15em; float: left; margin-left: 3em; margin-right: 3em; margin-bottom: 3em;" />
-
-Hi, I’m Nathan! I’m a PhD student at MIT Brain and Cognitive Sciences, working in computational neuroscience and AI.
-
-Before starting my PhD, I completed a master's in Mathematical Engineering and Physics at UCLouvain in Belgium. I worked as a research assistant in Robert Yang's lab at MIT, developing scalable methods to evaluate Recurrent Neural Network models. I also had the opportunity to work in Omri Barak's lab at the Technion, studying generalization in computational models of neural dynamics.
-<br>
-<br>
-
-<div style="clear: both;"></div>
+Hi, I’m Nathan! I'm a PhD student at MIT working on embodied agents with Ila Fiete, Daniela Rus, and Phillip Isola.
 
 <h3>Hackathons</h3>
 
